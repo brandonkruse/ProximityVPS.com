@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+	<head>
+	
+		<meta charset="utf-8" />
+		<title>ProximityVPS</title>
+	
+		<meta name="keywords" content="ProximityVPS" />
+		<meta name="description" content="ProximityVPS" />
+		<meta name="author" content="ProximityVPS" />
+		<meta name="copyright" content="ProximityVPS - Copyright (c) 2012" />
+	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+	
+		<!-- Load Google Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700,900' rel='stylesheet' type='text/css'>
+			
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+        <script src="http://code.jquery.com/ui/1.8.22/jquery-ui.min.js" type="text/javascript"></script>
+        <script language="javascript" type="text/javascript" src="js/leanModal.min.js"></script>
+        
+        
+		<script type="text/javascript">
+
+			//add placeholders to old browsers
+			jQuery(function() {
+			   jQuery.support.placeholder = false;
+			   standardInput = document.createElement('input');
+			   if('placeholder' in standardInput) jQuery.support.placeholder = true;
+			});
+			$(function() {
+			   if(!$.support.placeholder) { 
+				  var active = document.activeElement;
+				  $(':text').focus(function () {
+					 if ($(this).attr('placeholder') != '' && $(this).val() == $(this).attr('placeholder')) {
+						$(this).val('').removeClass('hasPlaceholder');
+					 }
+				  }).blur(function () {
+					 if ($(this).attr('placeholder') != '' && ($(this).val() == '' || $(this).val() == $(this).attr('placeholder'))) {
+						$(this).val($(this).attr('placeholder')).addClass('hasPlaceholder');
+					 }
+				  });
+				  $(':text').blur();
+				  $(active).focus();
+				  $('form:eq(0)').submit(function () {
+					 $(':text.hasPlaceholder').val('');
+				  });
+			   }
+			});
+			$(function() {
+			   if(!$.support.placeholder) { 
+				  var active = document.activeElement;
+				  $(':password').focus(function () {
+					 if ($(this).attr('placeholder') != '' && $(this).val() == $(this).attr('placeholder')) {
+						$(this).val('').removeClass('hasPlaceholder');
+					 }
+				  }).blur(function () {
+					 if ($(this).attr('placeholder') != '' && ($(this).val() == '' || $(this).val() == $(this).attr('placeholder'))) {
+						$(this).val($(this).attr('placeholder')).addClass('hasPlaceholder');
+					 }
+				  });
+				  $(':password').blur();
+				  $(active).focus();
+				  $('form:eq(0)').submit(function () {
+					 $(':password.hasPlaceholder').val('');
+				  });
+			   }
+			});
+		</script>
+
+	</head>
+
+	<body id="signup-body">
+		
+		<header>
+			
+			<div class="site-container">
+				
+				<a href="/">
+					<h1 id="logo1">PROXIMITY</h1><h1 id="logo2">VPS</h1>
+				</a>
+				
+				<nav id="main-nav">
+						<ul id="primary">
+                            <li>Welcome, Drew!</li>
+						</ul>
+                        
+                        
+                        <a href="logout.php" class="header-login-btn">Logout</a>
+						
+				</nav>
+				
+			</div>
+			
+		</header>
+        
+			
+        <div class="site-container">
+            
+            <h1 id="dash-title">Server Info</h1>
+            
+            <div id="sidebar">
+                
+                <nav id="sidebar-nav">
+                    
+						<ul id="dash-sidebar">
+                            <li><a href="dashboard.html"><img style="margin-right:20px;" src="images/dash-icon.png">Dashboard</a></li>
+                            <li><a href="server-info.html"><img style="margin-right:20px;" src="images/server-info-icon.png">Server Info</a></li>
+                            <li><a href="server-management.html"><img style="margin-right:20px;" src="images/manage-server-icon.png">Manage Server</a></li>
+                            <li><a href="support.html"><img style="margin-right:20px;" src="images/support-icon.png">Support Center</a></li>
+                            <li><a href="account.html"><img style="margin-right:20px;" src="images/account-icon.png">My Account</a></li>
+						</ul>
+						
+				</nav>
+				
+				<a href=""><div class="server-btn"><p>Reboot Machine</p></div></a>
+				
+				<a href=""><div class="server-btn"><p>Reset Password</p></div></a>
+                
+            </div>
+            
+            <div class="dash-content">
+                
+                <h2 class="content-title">Manage Server</h2>
+                
+                <div class="widget-full white-container">
+                    
+                    <form method="post" action="" name="" id="dash-form">
+                        
+                        <div class="dash-label">Option 1</div>
+						
+						<input type="text" id="something" name="something" class="full-input" placeholder="s134235.proximityvps.com" />
+                        
+                        <div class="dash-label">Longer Text Option 2</div>
+						
+						<input type="text" id="something" name="something" class="full-input" placeholder="204.156.173.218" />
+						
+					</form>
+                    
+                </div>  
+
+            </div>
+
+        </div>
+	
+	
+		<!-- Load JS Scripts -->
+
+
+		
+	</body>
+
+</html>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37735811-5']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>

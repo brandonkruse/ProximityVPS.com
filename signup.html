@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+	<head>
+	
+		<meta charset="utf-8" />
+		<title>ProximityVPS</title>
+	
+		<meta name="keywords" content="ProximityVPS" />
+		<meta name="description" content="ProximityVPS" />
+		<meta name="author" content="ProximityVPS" />
+		<meta name="copyright" content="ProximityVPS - Copyright (c) 2012" />
+	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+	
+		<!-- Load Google Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700,900' rel='stylesheet' type='text/css'>
+			
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+		<script type="text/javascript" src="js/ajax.js"></script>
+        
+        <script type="text/javascript">
+            
+            $(document).ready(function() {
+                
+                $('#basic-trader').click(function() {
+                    $('.order-details').hide();
+                    $('.order-details p').remove();
+                    $('.order-details').append('<p>Basic Trader</p>');
+                    $('.order-details').append('<p>$75 - per month</p>');
+                    $('.order-details').fadeIn(800);
+                 });
+                
+                $('#power-trader').click(function() {
+                    $('.order-details').hide();
+                    $('.order-details p').remove();
+                    $('.order-details').append('<p>Power Trader</p>');
+                    $('.order-details').append('<p>$100 - per month</p>');
+                    $('.order-details').fadeIn(800);
+                 });
+                
+                $('#specialist').click(function() {
+                    $('.order-details').hide();
+                    $('.order-details p').remove();
+                    $('.order-details').append('<p>Specialist</p>');
+                    $('.order-details').append('<p>$150 - per month</p>');
+                    $('.order-details').fadeIn(800);
+                 });
+                
+            });
+            
+        </script>
+        
+		<script type="text/javascript">
+			//add placeholders to old browsers
+			jQuery(function() {
+			   jQuery.support.placeholder = false;
+			   standardInput = document.createElement('input');
+			   if('placeholder' in standardInput) jQuery.support.placeholder = true;
+			});
+			$(function() {
+			   if(!$.support.placeholder) { 
+				  var active = document.activeElement;
+				  $(':text').focus(function () {
+					 if ($(this).attr('placeholder') != '' && $(this).val() == $(this).attr('placeholder')) {
+						$(this).val('').removeClass('hasPlaceholder');
+					 }
+				  }).blur(function () {
+					 if ($(this).attr('placeholder') != '' && ($(this).val() == '' || $(this).val() == $(this).attr('placeholder'))) {
+						$(this).val($(this).attr('placeholder')).addClass('hasPlaceholder');
+					 }
+				  });
+				  $(':text').blur();
+				  $(active).focus();
+				  $('form:eq(0)').submit(function () {
+					 $(':text.hasPlaceholder').val('');
+				  });
+			   }
+			});
+			$(function() {
+			   if(!$.support.placeholder) { 
+				  var active = document.activeElement;
+				  $(':password').focus(function () {
+					 if ($(this).attr('placeholder') != '' && $(this).val() == $(this).attr('placeholder')) {
+						$(this).val('').removeClass('hasPlaceholder');
+					 }
+				  }).blur(function () {
+					 if ($(this).attr('placeholder') != '' && ($(this).val() == '' || $(this).val() == $(this).attr('placeholder'))) {
+						$(this).val($(this).attr('placeholder')).addClass('hasPlaceholder');
+					 }
+				  });
+				  $(':password').blur();
+				  $(active).focus();
+				  $('form:eq(0)').submit(function () {
+					 $(':password.hasPlaceholder').val('');
+				  });
+			   }
+			});
+		</script>
+	
+		<script type="text/javascript">	
+			$(document).ready(function(){
+				$('a[href^="#"]').bind('click.smoothscroll',function (e) {
+					e.preventDefault();
+					var target = this.hash,
+					$target = $(target);
+		 
+					$('html, body').stop().animate({
+						'scrollTop': $target.offset().top
+					}, 900, 'swing', function () {
+					window.location.hash = target;
+					});
+				});
+			});
+		</script>
+
+	</head>
+
+	<body id="signup-body">
+		
+		<header>
+			
+			<div class="site-container">
+				
+				<a href="/">
+					<h1 id="logo1">PROXIMITY</h1><h1 id="logo2">VPS</h1>
+				</a>
+				
+				<nav id="main-nav">
+						<ul id="primary">
+								<li><a href="index.html"> Home </a></li>
+								<li><a href="about.html"> About </a></li>
+								<li><a href="contact.html"> Contact </a></li>
+						</ul>
+                        
+                        <a href="login.html" class="header-login-btn">Login</a>
+						
+				</nav>
+				
+			</div>
+			
+		</header>
+			
+		<div class="site-container">
+			
+			<div class="step-title">
+				<span class="step-number">1</span> <h2>PICK YOUR PACKAGE</h2>
+			</div>
+			
+			<section id="body-content">
+				
+				<div class="body-title">
+					
+					<div id="pricing-table">
+						<div class="pricing-column">
+							<h3 class="package-title">Basic Trader</h3>
+							<div class="package-price"><h2>$75</h2><h4>/mo.</h4></div>
+							<p class="odd-feature">RAM: 2GB Available</p>
+							<p class="even-feature">Disk Space: 15 GB</p>
+							<p class="odd-feature">Cores: 1</p>
+							<p class="even-feature">Single Trading Monitor</p>
+							<a href="#step2"><div id="basic-trader" class="package-btn">Select</div></a>
+						</div>
+						<div class="pricing-column">
+							<h3 class="package-title">Power Trader</h3>
+							<div class="favorite-package-price"><h2>$100</h2><h4>/mo.</h4></div>
+							<p class="odd-feature">RAM: 4GB Available</p>
+							<p class="even-feature">Disk Space: 40 GB</p>
+							<p class="odd-feature">Cores: 2</p>
+							<p class="even-feature">Multiple Trading Monitors</p>
+							<a href="#step2"><div id="power-trader" class="package-btn">Select</div></a>
+						</div>
+						<div class="pricing-column">
+							<h3 class="package-title">Specialist</h3>
+							<div class="package-price"><h2>$150</h2><h4>/mo.</h4></div>
+							<p class="odd-feature">RAM: 8GB Available</p>
+							<p class="even-feature">Disk Space: 80 GB (SSD)</p>
+							<p class="odd-feature">Cores: 4</p>
+							<p class="even-feature">Tests and Optimizations</p>
+							<a href="#step2"><div id="specialist" class="package-btn">Select</div></a>
+						</div>
+						<div class="feature-column">
+							<h5 class="feature-title">Order Summary</h5>
+							<div class="order-details">
+								
+								<p>Please pick a package from step 1 to proceed.</p>
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				
+			</section>
+			
+			
+		   <div class="step-title" id="step2">
+				<span class="step-number">2</span> <h2>CONTACT INFORMATION</h2>
+			</div>
+			
+			<section class="setup-content">
+				
+				<div class="setup-form">
+	
+					
+					<form method="post" action="" name="" id="contact-info">
+						
+						<input type="text" id="fname" name="fname" class="full-input" placeholder="First Name" />
+						
+						<input type="text" id="lname" name="lname" class="full-input" placeholder="Last Name" />
+					
+						<input type="text" id="email" name="email" class="full-input" placeholder="Email Address" />
+					
+						<input type="text" id="website" name="website" class="full-input" placeholder="Website URL" />
+						
+						<input type="text" id="address1" name="address1" class="full-input" placeholder="Address 1" />
+					
+						<input type="text" id="address2" name="address2" class="full-input" placeholder="Address 2" />
+						
+						<input type="text" id="city" name="city" class="full-input" placeholder="City" />
+					
+						<input type="text" id="state" name="state" class="full-input" placeholder="State" />
+						
+						<input type="text" id="country" name="country" class="full-input" placeholder="Country" />
+						
+						<input type="text" id="phone" name="phone" class="full-input" placeholder="Phone" />
+						
+						
+					</form>
+
+					
+				</div>
+		
+				<div class="order-summary">
+					<h5 class="summary-title">Order Summary</h5>
+					<div class="order-details">
+						
+						<p>Please pick a package from step 1 to proceed.</p>
+						
+					</div>
+				</div>
+				
+			</section>
+			
+			
+		   <div class="step-title">
+				<span class="step-number">3</span> <h2>BILLING INFORMATION</h2>
+			</div>
+			
+			<section class="setup-content">
+				
+				<div class="setup-form">
+					
+					<form method="post" action="" name="" id="contact-info">
+						
+						<label for="ccnumber">Card Number:</label>
+						
+						<label for="ccnumber">Expiry Date:</label>
+						
+						<input type="text" id="ccnumber" name="ccnumber" class="full-input" placeholder="Card Number" />
+						
+						<select class="expiry-input" id="expirydate-month" name="expirydate-month">
+							<option value="1">1</option>
+							<option selected="selected" value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+						</select>
+						
+						<h2 class="expiry-divider">/</h2>
+					
+						<select class="expiry-input" id="expirydate-year" name="expirydate-year">
+							<option selected="selected" value="2013">2013</option>
+							<option value="2014">2014</option>
+							<option value="2015">2015</option>
+							<option value="2016">2016</option>
+							<option value="2017">2017</option>
+							<option value="2018">2018</option>
+							<option value="2019">2019</option>
+							<option value="2020">2020</option>
+							<option value="2021">2021</option>
+							<option value="2022">2022</option>
+							<option value="2023">2023</option>
+						</select>
+					
+						<input type="text" id="website" name="website" class="half-input" placeholder="CVV2" />
+
+						
+					</form>
+					
+				</div>
+		
+				<div class="order-summary">
+					<h5 class="summary-title">Order Summary</h5>
+					<div class="order-details">
+						
+						<p>Please pick a package from step 1 to proceed.</p>
+								
+					</div>
+				</div>
+				
+			</section>
+
+
+		</div>
+		
+		<footer></footer>
+	
+	
+		<!-- Load JS Scripts -->
+		<script src="http://code.jquery.com/ui/1.8.22/jquery-ui.min.js" type="text/javascript"></script>
+		<script src="js/modernizr.js"></script>
+
+		
+	</body>
+
+</html>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37735811-5']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
